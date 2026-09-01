@@ -1,0 +1,42 @@
+,tipo,ausentes,percentual_ausente,valores_unicos
+Idade (anos),int64,0,0.0,29
+Peso (kg),float64,0,0.0,117
+Altura (cm),float64,0,0.0,50
+IMC,float64,0,0.0,355
+Grupo sanguíneo,int64,0,0.0,8
+Frequência cardíaca (bpm),int64,0,0.0,11
+Frequência respiratória (rpm),int64,0,0.0,8
+Hemoglobina (g/dL),float64,0,0.0,46
+Ciclo (R/I),int64,0,0.0,3
+Duração do ciclo (dias),int64,0,0.0,12
+Tempo de casamento (anos),float64,1,0.18,34
+Gestante (S/N),int64,0,0.0,2
+Nº de abortos,int64,0,0.0,6
+Beta-HCG I (mIU/mL),float64,0,0.0,307
+Beta-HCG II (mIU/mL),float64,1,0.18,202
+FSH (mIU/mL),float64,0,0.0,371
+LH (mIU/mL),float64,0,0.0,342
+FSH/LH,float64,0,0.0,512
+Quadril (pol),int64,0,0.0,19
+Cintura (pol),int64,0,0.0,23
+Razão cintura/quadril,float64,0,0.0,96
+TSH (mIU/L),float64,0,0.0,308
+AMH (ng/mL),float64,1,0.18,300
+Prolactina (ng/mL),float64,0,0.0,481
+Vitamina D3 (ng/mL),float64,0,0.0,331
+Progesterona (ng/mL),float64,0,0.0,89
+Glicemia aleatória (mg/dL),float64,0,0.0,55
+Ganho de peso (S/N),int64,0,0.0,2
+Crescimento de pelos (S/N),int64,0,0.0,2
+Escurecimento da pele (S/N),int64,0,0.0,2
+Queda de cabelo (S/N),int64,0,0.0,2
+Espinhas (S/N),int64,0,0.0,2
+Fast food (S/N),float64,1,0.18,2
+Exercício regular (S/N),int64,0,0.0,2
+PA sistólica (mmHg),int64,0,0.0,6
+PA diastólica (mmHg),int64,0,0.0,5
+Nº de folículos (E),int64,0,0.0,21
+Nº de folículos (D),int64,0,0.0,20
+Tamanho médio do folículo (E) (mm),float64,0,0.0,31
+Tamanho médio do folículo (D) (mm),float64,0,0.0,32
+Endométrio (mm),float64,0,0.0,91

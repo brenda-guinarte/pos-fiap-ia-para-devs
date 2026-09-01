@@ -1,0 +1,39 @@
+{
+  "melhor_modelo": "Regressão Logística",
+  "criterio_selecao": "recall, seguido de F1 e ROC-AUC no teste",
+  "split": {
+    "total": 541,
+    "treino": 432,
+    "teste": 109,
+    "positivos_total": 177,
+    "prevalencia_total": 0.32717190388170053
+  },
+  "metricas": [
+    {
+      "modelo": "Regressão Logística",
+      "teste_accuracy": 0.8715596330275229,
+      "teste_precision": 0.7619047619047619,
+      "teste_recall": 0.8888888888888888,
+      "teste_f1": 0.8205128205128205,
+      "teste_roc_auc": 0.9505327245053271,
+      "cv_accuracy_media": 0.8705426356589147,
+      "cv_precision_media": 0.7723022273425498,
+      "cv_recall_media": 0.8655172413793103,
+      "cv_f1_media": 0.8149638126992947,
+      "cv_roc_auc_media": 0.9289675901800291
+    },
+    {
+      "modelo": "Random Forest",
+      "teste_accuracy": 0.8990825688073395,
+      "teste_precision": 0.8378378378378378,
+      "teste_recall": 0.8611111111111112,
+      "teste_f1": 0.8493150684931506,
+      "teste_roc_auc": 0.9410197869101978,
+      "cv_accuracy_media": 0.8891205560010691,
+      "cv_precision_media": 0.820831913502132,
+      "cv_recall_media": 0.8657635467980296,
+      "cv_f1_media": 0.8390607832713096,
+      "cv_roc_auc_media": 0.9564724630253965
+    }
+  ]
+}
