@@ -9,7 +9,11 @@ data/raw/*
 !data/raw/.gitkeep
 models/*
 !models/.gitkeep
+outputs/
+logs/
 
 # Artefatos pessoais / não entram na entrega
 reports/*.html
 reports/roteiro_video.md
+docs/fase2/roteiro-video.md
+docs/fase2/relatorio-esboco.md

@@ -24,16 +24,16 @@
     },
     {
       "modelo": "Random Forest",
-      "teste_accuracy": 0.8990825688073395,
-      "teste_precision": 0.8378378378378378,
-      "teste_recall": 0.8611111111111112,
-      "teste_f1": 0.8493150684931506,
-      "teste_roc_auc": 0.9410197869101978,
-      "cv_accuracy_media": 0.8891205560010691,
-      "cv_precision_media": 0.820831913502132,
-      "cv_recall_media": 0.8657635467980296,
-      "cv_f1_media": 0.8390607832713096,
-      "cv_roc_auc_media": 0.9564724630253965
+      "teste_accuracy": 0.908256880733945,
+      "teste_precision": 0.8823529411764706,
+      "teste_recall": 0.8333333333333334,
+      "teste_f1": 0.8571428571428571,
+      "teste_roc_auc": 0.9444444444444444,
+      "cv_accuracy_media": 0.9006682705159047,
+      "cv_precision_media": 0.8773405853405853,
+      "cv_recall_media": 0.8231527093596057,
+      "cv_f1_media": 0.8464145090279986,
+      "cv_roc_auc_media": 0.9548947263864935
     }
   ]
 }

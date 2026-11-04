@@ -150,38 +150,66 @@ def build_preprocessor(X: pd.DataFrame) -> ColumnTransformer:
     )
 
 
+BASELINE_LR_HYPERPARAMS: dict[str, object] = {
+    "class_weight": "balanced",
+    "max_iter": 2_000,
+    "random_state": RANDOM_STATE,
+}
+
+BASELINE_RF_HYPERPARAMS: dict[str, object] = {
+    "class_weight": "balanced",
+    "max_depth": 6,
+    "min_samples_leaf": 3,
+    "n_estimators": 400,
+    "n_jobs": -1,
+    "random_state": RANDOM_STATE,
+}
+
+
+def build_random_forest_pipeline(
+    X: pd.DataFrame, **model_kwargs: object
+) -> Pipeline:
+    """Pipeline RF com o mesmo pré-processamento da Fase 1."""
+    params = {**BASELINE_RF_HYPERPARAMS, **model_kwargs}
+    return Pipeline(
+        [
+            ("preprocessor", build_preprocessor(X)),
+            ("model", RandomForestClassifier(**params)),
+        ]
+    )
+
+
+def build_logistic_pipeline(X: pd.DataFrame, **model_kwargs: object) -> Pipeline:
+    """Pipeline de regressão logística com o mesmo pré-processamento da Fase 1."""
+    params = {**BASELINE_LR_HYPERPARAMS, **model_kwargs}
+    return Pipeline(
+        [
+            ("preprocessor", build_preprocessor(X)),
+            ("model", LogisticRegression(**params)),
+        ]
+    )
+
+
+def get_train_test_split(
+    test_size: float = 0.2,
+    random_state: int = RANDOM_STATE,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
+    """Mesmo split estratificado usado em `main()` (reprodutibilidade Fase 1 → 2)."""
+    X, y = load_data()
+    return train_test_split(
+        X,
+        y,
+        test_size=test_size,
+        stratify=y,
+        random_state=random_state,
+    )
+
+
 def build_models(X: pd.DataFrame) -> dict[str, Pipeline]:
     """Create interpretable baseline and nonlinear ensemble pipelines."""
     return {
-        "Regressão Logística": Pipeline(
-            [
-                ("preprocessor", build_preprocessor(X)),
-                (
-                    "model",
-                    LogisticRegression(
-                        class_weight="balanced",
-                        max_iter=2_000,
-                        random_state=RANDOM_STATE,
-                    ),
-                ),
-            ]
-        ),
-        "Random Forest": Pipeline(
-            [
-                ("preprocessor", build_preprocessor(X)),
-                (
-                    "model",
-                    RandomForestClassifier(
-                        class_weight="balanced",
-                        max_depth=6,
-                        min_samples_leaf=3,
-                        n_estimators=400,
-                        n_jobs=-1,
-                        random_state=RANDOM_STATE,
-                    ),
-                ),
-            ]
-        ),
+        "Regressão Logística": build_logistic_pipeline(X),
+        "Random Forest": build_random_forest_pipeline(X),
     }
 
 

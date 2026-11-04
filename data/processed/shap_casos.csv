@@ -1,3 +1,3 @@
 caso,rotulo_anonimo,tipo,descricao,y_real,y_predito,probabilidade_sop,figura
 acerto,Paciente A,verdadeiro_positivo,Verdadeiro positivo (tem SOP e o modelo acertou),1,1,1.0,shap_caso_acerto.png
-erro,Paciente B,falso_negativo,Falso negativo (tem SOP e o modelo errou),1,0,0.005279427092433426,shap_caso_erro.png
+erro,Paciente B,falso_negativo,Falso negativo (tem SOP e o modelo errou),1,0,0.005279427092434835,shap_caso_erro.png

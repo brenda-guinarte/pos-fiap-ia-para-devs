@@ -1,13 +1,14 @@
 # Tech Challenge — Detecção de Síndrome dos Ovários Policísticos
 
+**Repositório GitHub:** https://github.com/brenda-guinarte/pos-fiap-ia-para-devs  
+**Vídeo Fase 2 (Tech Challenge):** https://youtu.be/dGP4gHi4lHA
+
 Projeto da Fase 1 para desenvolver uma solução inicial de apoio à triagem de
 Síndrome dos Ovários Policísticos (PCOS/SOP) a partir de dados clínicos
 estruturados.
 
 > Este é um projeto acadêmico. O modelo não realiza diagnóstico e não deve ser
 > usado em decisões clínicas sem validação externa e supervisão médica.
-
-**Repositório:** https://github.com/brenda-guinarte/pos-fiap-ia-para-devs
 
 ## Problema
 
@@ -158,6 +159,25 @@ anonimização.
 
 
 
+## Fase 2 — Tech Challenge (Projeto 1)
+
+Continuação direta deste repositório: **algoritmo genético** para hiperparâmetros do
+Random Forest (mesmo pré-processamento e split da Fase 1), **comparativo** com o baseline,
+**logging** de desempenho e **LLM local gratuita** (Ollama) para interpretação em
+linguagem natural.
+
+```bash
+python -m src.phase2.cli --quick
+python -m src.phase2.experiments.run_experiments
+```
+
+Documentação: [`docs/fase2/COMO_RODAR.md`](docs/fase2/COMO_RODAR.md),
+[`docs/fase2/arquitetura.md`](docs/fase2/arquitetura.md),
+[`docs/fase2/relatorio-tecnico.md`](docs/fase2/relatorio-tecnico.md) e
+[`docs/fase2/avaliacao-llm.md`](docs/fase2/avaliacao-llm.md).
+
+Relatório e vídeo de entrega: links no [topo deste README](#tech-challenge--detecção-de-síndrome-dos-ovários-policísticos).
+
 ## Próximos passos
 
 - Avaliar calibração das probabilidades e ajuste de limiar para recall.
@@ -171,8 +191,11 @@ anonimização.
 
 - Brenda Guinarte — RM376294
 
+## Vídeos
 
+| Fase | Conteúdo | Link |
+|------|----------|------|
+| **1** | Triagem PCOS/SOP — modelos, métricas e EDA | https://youtu.be/rRfgysj36dU |
+| **2** | Tech Challenge — algoritmo genético, comparativo e LLM (Ollama) | https://youtu.be/dGP4gHi4lHA |
 
-## Vídeo
-
-https://youtu.be/rRfgysj36dU
+Relatório técnico Fase 2 (inclui o link do vídeo §8): [`docs/fase2/relatorio-tecnico.md`](docs/fase2/relatorio-tecnico.md).
